@@ -19,7 +19,7 @@ public interface MemberService {
     void checkTheList(Scanner scanner);
     void registerToSendEMails(Scanner scanner);
     void savingMoneyList(Scanner scanner);
-    void savingMoneyList(Scanner scanner);
+    void CheckTheDetailsOfTheSavings(Scanner scanner);
 
 
 }

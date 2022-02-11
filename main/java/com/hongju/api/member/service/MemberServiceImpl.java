@@ -1,5 +1,7 @@
 package com.hongju.api.member.service;
 
+import java.util.Scanner;
+
 /**
  * packageName        : com.hongju.api.member.service
  * fileName           : MemberServiceImpl
@@ -11,5 +13,34 @@ package com.hongju.api.member.service;
  * ================================
  * 2022-02-11    nohhongju    최초 생성
  */
-public class MemberServiceImpl {
+public class MemberServiceImpl implements MemberService{
+    @Override
+    public void membershipList(Scanner scanner) {
+
+    }
+
+    @Override
+    public void membershipInformation(Scanner scanner) {
+
+    }
+
+    @Override
+    public void checkTheList(Scanner scanner) {
+
+    }
+
+    @Override
+    public void registerToSendEMails(Scanner scanner) {
+
+    }
+
+    @Override
+    public void savingMoneyList(Scanner scanner) {
+
+    }
+
+    @Override
+    public void CheckTheDetailsOfTheSavings(Scanner scanner) {
+
+    }
 }
