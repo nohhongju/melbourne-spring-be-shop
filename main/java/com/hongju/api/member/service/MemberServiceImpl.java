@@ -1,5 +1,7 @@
 package com.hongju.api.member.service;
 
+import org.springframework.stereotype.Service;
+
 import java.util.Scanner;
 
 /**
@@ -13,34 +15,51 @@ import java.util.Scanner;
  * ================================
  * 2022-02-11    nohhongju    최초 생성
  */
+@Service
 public class MemberServiceImpl implements MemberService{
-    @Override
-    public void membershipList(Scanner scanner) {
 
+    @Override
+    public String membershipList() {
+        return null;
     }
 
     @Override
-    public void membershipInformation(Scanner scanner) {
-
+    public String membershipInformation() {
+        return null;
     }
 
     @Override
-    public void checkTheList(Scanner scanner) {
-
+    public String checkTheList() {
+        return null;
     }
 
     @Override
-    public void registerToSendEMails(Scanner scanner) {
-
+    public String registerToSendEMails() {
+        return null;
     }
 
     @Override
-    public void savingMoneyList(Scanner scanner) {
-
+    public String savingMoneyList() {
+        return null;
     }
 
     @Override
-    public void CheckTheDetailsOfTheSavings(Scanner scanner) {
+    public String CheckTheDetailsOfTheSavings() {
+        return null;
+    }
 
+    @Override
+    public String calc() {
+        return null;
+    }
+
+    @Override
+    public String bmi() {
+        return null;
+    }
+
+    @Override
+    public String grade() {
+        return null;
     }
 }

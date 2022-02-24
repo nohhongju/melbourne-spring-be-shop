@@ -14,12 +14,15 @@ import java.util.Scanner;
  * 2022-02-11    nohhongju    최초 생성
  */
 public interface MemberService {
-    void membershipList(Scanner scanner);
-    void membershipInformation(Scanner scanner);
-    void checkTheList(Scanner scanner);
-    void registerToSendEMails(Scanner scanner);
-    void savingMoneyList(Scanner scanner);
-    void CheckTheDetailsOfTheSavings(Scanner scanner);
+    String membershipList();
+    String membershipInformation();
+    String checkTheList();
+    String registerToSendEMails();
+    String savingMoneyList();
+    String CheckTheDetailsOfTheSavings();
+    String calc();
+    String bmi();
+    String grade();
 
 
 }
