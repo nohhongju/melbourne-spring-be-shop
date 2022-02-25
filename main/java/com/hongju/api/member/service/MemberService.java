@@ -1,5 +1,10 @@
 package com.hongju.api.member.service;
 
+import com.hongju.api.member.domain.CalcDTO;
+import com.hongju.api.member.domain.GradeDTO;
+import com.hongju.api.member.domain.LoginDTO;
+import com.hongju.api.member.domain.MemberDTO;
+
 import java.util.Scanner;
 
 /**
@@ -14,15 +19,14 @@ import java.util.Scanner;
  * 2022-02-11    nohhongju    최초 생성
  */
 public interface MemberService {
-    String membershipList();
-    String membershipInformation();
-    String checkTheList();
-    String registerToSendEMails();
-    String savingMoneyList();
-    String CheckTheDetailsOfTheSavings();
-    String calc();
-    String bmi();
-    String grade();
 
 
+    String calc(CalcDTO calc);
+
+
+    String bmi(MemberDTO member);
+
+    String grade(GradeDTO grade);
+
+    String login(LoginDTO login);
 }

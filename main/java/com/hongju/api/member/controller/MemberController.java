@@ -1,5 +1,8 @@
 package com.hongju.api.member.controller;
 
+import com.hongju.api.member.domain.CalcDTO;
+import com.hongju.api.member.domain.GradeDTO;
+import com.hongju.api.member.domain.LoginDTO;
 import com.hongju.api.member.domain.MemberDTO;
 import com.hongju.api.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
@@ -18,19 +21,29 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/member")
 public class MemberController {
-
     private final MemberService service;
 
-    @GetMapping("/member/bmi/{name}/{height}/{weight}")
-    public String getBmi(@PathVariable String name,
-                         @PathVariable double height,
-                         @PathVariable double weight){
-        System.out.println("리액트에서 넘어온 이름 : "+ name);
-        System.out.println("리액트에서 넘어온 키 : "+ height);
-        System.out.println("리액트에서 넘어온 몸무게 : "+ weight);
+    @PostMapping("/calc")
+   public String calc(@RequestBody CalcDTO calc){
+       return service.calc(calc);
 
-        return "BMI 는 정상";
+   }
+   @PostMapping("/bmi")
+   public String bmi(@RequestBody MemberDTO member){
 
+        return service.bmi(member);
+   }
+    @PostMapping("/grade")
+    public String grade(@RequestBody GradeDTO grade){
+
+        return service.grade(grade);
     }
+    @PostMapping("/login")
+    public String login(@RequestBody LoginDTO login){
+
+        return service.login(login);
+    }
+
 }
