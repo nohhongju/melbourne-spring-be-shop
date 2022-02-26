@@ -56,7 +56,7 @@ public class MemberServiceImpl implements MemberService{
         }else if (res >= 23){
             s = "과체중";
         }else if (res >= 18.5){
-            s = "정산";
+            s = "정상";
         }else {
             s = "저체중";
         }
@@ -74,12 +74,12 @@ public class MemberServiceImpl implements MemberService{
 
     @Override
     public String login(LoginDTO login) {
-        String res = "";
-        String PASSWORD = "abc";
-        switch (PASSWORD){
-            case "abc" : res = String.format("로그인 성공"); break;
-            default: res = String.format("ID는 맞고, 비번 %s 가 틀립니다. 로그인 실패 ", login.getPassword() ); break;
-        }
-        return res;
+        String PASSWORD;
+        PASSWORD = "abc";
+        return (login.getPassword().equals(PASSWORD)) ?
+                String.format(" %s 님의 비번 %s 가 맞습니다. 로그인 성공 ", login.getUsername(), login.getPassword())
+                :
+                String.format(" %s 의 ID 는 맞고, 비번 %s 가 틀립니다. 로그인 실패 ", login.getUsername(), login.getPassword())
+                ;
     }
 }
